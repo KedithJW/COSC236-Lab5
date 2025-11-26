@@ -4,12 +4,21 @@ public class LibrarianController {
 	
 	Library library; // Library dependency
 	private BorrowingService borrowingService; // Singleton
-	public LibrarianController( ) {
+	private BookFactory eBookFactory;
+	private BookFactory audioBookFactory;
+	private BookFactory paperBookFactory;
+	
+	public LibrarianController() {
 		this.library = new Library(); // Constructor injection
 		//The LibrarianController holds 
 		//the single instance of BorrowingService 
 		this.borrowingService = BorrowingService.getInstance(); 
+		this.eBookFactory = new EBookSupplier();
+		this.audioBookFactory = new AudioBookSupplier();
+		this.paperBookFactory = new PaperBookSupplier();
+		
 	}
+	
 	public Library getLibrary() {
 		return this.library;
 	}
@@ -19,9 +28,32 @@ public class LibrarianController {
 	public void showMembers() {
 		library.showMembers();
 	}
-	public void addBook(String title) {
-		library.addBook(new Book(title));  // Book class constructor dependency
+	
+	// EBook
+	public void addEBook(String title) {
+		library.addBook(eBookFactory.createBook(title));
 	}
+	
+	// PaperBook
+	public void addPaperBook(String title) {
+		library.addBook(paperBookFactory.createBook(title));
+	}
+	
+	//AudioBook 
+	public void addAudioBook(String title) {
+		library.addBook(audioBookFactory.createBook(title));
+	}
+	
+	
+	public void addBook(BookFactory factory, String title) {
+		library.addBook(factory.createBook(title)); // Book type depends on
+		// the factory passed in
+	}
+	
+	
+//	public void addBook(String title) {
+//		library.addBook(new PaperBook(title));  // Book class constructor dependency
+//	}
 	public void addMember(String name) {
 		library.addMember(new Member(name, borrowingService)); // Member class constructor dependency
 	}
