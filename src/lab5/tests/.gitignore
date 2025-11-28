@@ -6,3 +6,7 @@
 /TestFindClassString.class
 /TestNotAvailableBook.class
 /TestRemoveMemberWithBooks.class
+/TestBorrowingService.class
+/TestAddRemoveAudioBooks.class
+/TestAddRemoveEBooks.class
+/TestAddRemovePaperBooks.class

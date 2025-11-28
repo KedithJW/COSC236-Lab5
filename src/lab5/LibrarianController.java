@@ -4,6 +4,10 @@ public class LibrarianController {
 	
 	Library library; // Library dependency
 	
+//	 Update LibrarianController Methods: Rename the existing addBook() method in the
+//	 LibrarianController class to addPaperBook() and add two new methods: addEBook() and
+//	 addAudioBook(), to handle the addition of EBook and AudioBook objects, respectively.
+	
 	public LibrarianController( ) {
 		this.library = new Library(); // Constructor injection
 	}
@@ -16,8 +20,15 @@ public class LibrarianController {
 	public void showMembers() {
 		library.showMembers();
 	}
-	public void addBook(String title) {
-		library.addBook(new Book(title));  // Book class constructor dependency
+	// After creating Book interface it seems like I will need addBook for each specific book type... seems messy 
+	public void addPaperBook(String title) {
+		library.addBook(new PaperBook(title));  // Book class constructor dependency
+	}
+	public void addEBook(String title) {
+		library.addBook(new EBook(title));  
+	}
+	public void addAudioBook(String title) {
+		library.addBook(new AudioBook(title)); 
 	}
 	public void addMember(String name) {
 		library.addMember(new Member(name)); // Member class constructor dependency
