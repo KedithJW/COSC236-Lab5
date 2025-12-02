@@ -6,4 +6,6 @@
 /TestFindClassString.class
 /TestNotAvailableBook.class
 /TestRemoveMemberWithBooks.class
+/TestSingleton.class
+/TestMembersBorrowingService.class
 /package-info.class

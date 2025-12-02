@@ -3,5 +3,8 @@
 /Library.class
 /LibraryApp.class
 /Member.class
+/BorrowingService.class
+/BorrowingServiceAPI.class
+/BorrowingBookResult.class
 /PaperBook.class
 /package-info.class
