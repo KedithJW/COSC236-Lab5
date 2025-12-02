@@ -29,26 +29,31 @@ public class LibrarianController {
 		library.showMembers();
 	}
 	
-	// EBook
-	public void addEBook(String title) {
-		library.addBook(eBookFactory.createBook(title));
-	}
+// 	// EBook
+// 	public void addEBook(String title) {
+// 		library.addBook(eBookFactory.createBook(title));
+// 	}
 	
-	// PaperBook
-	public void addPaperBook(String title) {
-		library.addBook(paperBookFactory.createBook(title));
-	}
+// 	// PaperBook
+// 	public void addPaperBook(String title) {
+// 		library.addBook(paperBookFactory.createBook(title));
+// 	}
 	
-	//AudioBook 
-	public void addAudioBook(String title) {
-		library.addBook(audioBookFactory.createBook(title));
-	}
+// 	//AudioBook 
+// 	public void addAudioBook(String title) {
+// 		library.addBook(audioBookFactory.createBook(title));
+// 	}
 	
 	
 	public void addBook(BookFactory factory, String title) {
 		library.addBook(factory.createBook(title)); // Book type depends on
 		// the factory passed in
-	}
+  }
+// 	public void addPaperBook(String title) {
+//     library.addBook(new PaperBook(title));
+//   }
+
+	
 	
 	
 //	public void addBook(String title) {
@@ -102,4 +107,12 @@ public class LibrarianController {
 		else  	
 			System.out.println("Either book " + title + " or member " + name + " not found.");
 	}
+public void addEBook(String title) {
+    library.addBook(new EBook(title));
+}
+
+public void addAudioBook(String title) {
+    library.addBook(new AudioBook(title));
+}
+
 }
