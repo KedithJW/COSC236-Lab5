@@ -19,8 +19,10 @@ public class LibrarianController {
 	public void showMembers() {
 		library.showMembers();
 	}
-	public void addBook(String title) {
-		library.addBook(new Book(title));  // Book class constructor dependency
+	public void addPaperBook(String title) {
+    library.addBook(new PaperBook(title));
+}
+
 	}
 	public void addMember(String name) {
 		library.addMember(new Member(name, borrowingService)); // Member class constructor dependency
@@ -70,4 +72,12 @@ public class LibrarianController {
 		else  	
 			System.out.println("Either book " + title + " or member " + name + " not found.");
 	}
+public void addEBook(String title) {
+    library.addBook(new EBook(title));
+}
+
+public void addAudioBook(String title) {
+    library.addBook(new AudioBook(title));
+}
+
 }
