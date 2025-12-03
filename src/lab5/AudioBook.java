@@ -23,6 +23,11 @@ public class AudioBook implements Book {
     }
 
     @Override
+    public void setTitle(String title) {
+		this.title = title;
+	}
+
+    @Override
     public String toString() {
         return "AudioBook: " + title;
     }
