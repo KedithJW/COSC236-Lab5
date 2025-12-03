@@ -32,6 +32,6 @@ public class PaperBook implements Book {
 
 	@Override
 	public String toString() {
-		return "Book: " + title;
+		return "PaperBook: " + title;
 	}
 }
