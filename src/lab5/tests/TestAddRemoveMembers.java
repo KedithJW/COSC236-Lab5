@@ -25,10 +25,8 @@ class TestAddRemoveMembers {
 	
 	Member member1 = new Member("Dude", service);
 	Member member2 = new Member("Gal", service);
-	Book book1 = new Book("Dune");
-	Book book2 = new Book("1984");
-	Member member1 = new Member("Dude");
-	Member member2 = new Member("Gal");
+
+
 	PaperBook book1 = new PaperBook("Dune");
 	PaperBook book2 = new PaperBook("1984");
 	

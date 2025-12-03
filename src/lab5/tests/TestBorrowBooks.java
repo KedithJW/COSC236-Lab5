@@ -15,8 +15,7 @@ class TestBorrowBooks {
 	Member member1;
 	Member member2;
 	private BorrowingService service = BorrowingService.getInstance();
-	Book book1 = new Book("Dune");
-	Book book2 = new Book("1984");
+
 	
 	PaperBook book1 = new PaperBook("Dune");
 	PaperBook book2 = new PaperBook("1984");

@@ -8,3 +8,9 @@
 /BorrowingBookResult.class
 /PaperBook.class
 /package-info.class
+/AudioBook.class
+/AudioBookSupplier.class
+/BookFactory.class
+/EBook.class
+/EBookSupplier.class
+/PaperBookSupplier.class

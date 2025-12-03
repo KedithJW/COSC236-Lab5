@@ -4,9 +4,9 @@ public class LibrarianController {
 	
 	Library library; // Library dependency
 	private BorrowingService borrowingService; // Singleton
-	private BookFactory eBookFactory;
-	private BookFactory audioBookFactory;
-	private BookFactory paperBookFactory;
+	BookFactory eBookFactory;
+	BookFactory audioBookFactory;
+	BookFactory paperBookFactory;
 	
 	public LibrarianController() {
 		this.library = new Library(); // Constructor injection

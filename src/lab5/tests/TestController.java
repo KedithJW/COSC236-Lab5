@@ -18,15 +18,15 @@ class TestController {
 	String bookTitle1 = "Dune";
 	String bookTitle2 = "1984";
 	String bookTitle3 = "Moby Dick";
-
+	
 	@BeforeEach
 	void setUp() throws Exception {
 		this.librarian = new LibrarianController(); // Fresh library: one member, three books
 		this.library = librarian.getLibrary(); 
 		librarian.addMember(memberName);
-		librarian.addBook(bookTitle1);
-		librarian.addBook(bookTitle2);
-		librarian.addBook(bookTitle3);
+		librarian.addBook(null, bookTitle1);
+		librarian.addBook(null, bookTitle2);
+		librarian.addBook(null, bookTitle3);
 	}
 
 	@Test

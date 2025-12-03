@@ -1,3 +1,5 @@
+package lab5;
+
 public class EBook implements Book {
 
     private String title;

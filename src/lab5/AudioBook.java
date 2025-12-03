@@ -1,3 +1,5 @@
+package lab5;
+
 public class AudioBook implements Book {
 
     private String title;
