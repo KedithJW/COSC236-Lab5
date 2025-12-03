@@ -9,19 +9,29 @@ public class PaperBook implements Book {
 		this.title = title;
 		this.isAvailable = true;
 	}
+
+	@Override
 	public String getTitle() {
 		return title;
 	}
+
+	@Override
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String toString() {
-		return "Book: " + title;
-	}
+
+	@Override
 	public void setIsAvailable(boolean isAvailable) {
 		this.isAvailable = isAvailable;
 	}
+
+	@Override
 	public boolean getIsAvailable() {
 		return isAvailable;
+	}
+
+	@Override
+	public String toString() {
+		return "Book: " + title;
 	}
 }
